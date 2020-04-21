@@ -1,0 +1,2509 @@
+{
+	"info": {
+		"_postman_id": "14220839-3a57-4207-b55f-54d30ee17049",
+		"name": "ioCash client",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CREATE NATURAL USER",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token_client_test}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \n     \"userName\" :  \"Quique1018\",\n     \"firstName\":  \"Quique\",\n     \"lastName\":   \"gomez\",\n     \"email\":      \"quiquegomez1018@io.builders\",\n     \"mobilePhone\": \"+6904556480\",\n     \"dltAddress\": \"0xf47E63d251Ed9f07E908df2367d39b05231d4009\",\n     \"dltNetwork\": \"AlastriaTelsius\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_path}}/api/v2/public/users/natural",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"public",
+						"users",
+						"natural"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE NATURAL USER",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token_client_test}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": \"kike\",\r\n  \"lastName\": \"gomez\",\r\n  \"userName\": \"kikegomez\",\r\n  \"companyName\": \"pepe\"\r\n}"
+				},
+				"url": {
+					"raw": "{{base_path}}/api/v2/public/users/natural/e05e2a0f-55b5-4886-90da-09063f34cd76",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"public",
+						"users",
+						"natural",
+						"e05e2a0f-55b5-4886-90da-09063f34cd76"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET NATURAL USERS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token_client_test}}"
+					}
+				],
+				"url": {
+					"raw": "{{base_path}}/api/v2/public/users/natural",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"public",
+						"users",
+						"natural"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET NATURAL USER",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token_client_test}}"
+					}
+				],
+				"url": {
+					"raw": "{{base_path}}/api/v2/public/users/natural/e05e2a0f-55b5-4886-90da-09063f34cd76",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"public",
+						"users",
+						"natural",
+						"e05e2a0f-55b5-4886-90da-09063f34cd76"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET NATURAL USER COMPLIANCE",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token_client_test}}"
+					}
+				],
+				"url": {
+					"raw": "{{base_path}}/api/v2/public/users/natural/e05e2a0f-55b5-4886-90da-09063f34cd76/compliance",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"public",
+						"users",
+						"natural",
+						"e05e2a0f-55b5-4886-90da-09063f34cd76",
+						"compliance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE PHONE NATURAL USER",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer {{token_client_test}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"mobilePhone\": \"+6903750428\"\r\n}"
+				},
+				"url": {
+					"raw": "{{base_path}}/api/v2/public/users/natural/e6a2fd31-bee0-479c-8fb3-20cf0f829c65/mobile-phone",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"public",
+						"users",
+						"natural",
+						"e6a2fd31-bee0-479c-8fb3-20cf0f829c65",
+						"mobile-phone"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE JURIDICAL USER",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token_client_test}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \n     \"userName\" :  \"quique1001\",\n     \"companyName\": \"QuiqueCompany1001\",\n     \"email\":      \"quiquegomez1001@io.builders\",\n     \"mobilePhone\": \"+6903701911\",\n     \"dltAddress\": \"0x1205C19Ae5e70555960A0d55E8a47c04dA903e52\"\n}"
+				},
+				"url": {
+					"raw": "{{base_path}}/api/v2/public/users/juridical",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"public",
+						"users",
+						"juridical"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE JURIDICAL USER",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer {{token_client_test}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"companyName\": \"kikeCompani\",\r\n  \"mobilePhone\": \"\"\r\n}"
+				},
+				"url": {
+					"raw": "{{base_path}}/api/v2/public/users/juridical/ad20c2ab-bdcb-485d-8c8a-c4ac4f9246bc",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"public",
+						"users",
+						"juridical",
+						"ad20c2ab-bdcb-485d-8c8a-c4ac4f9246bc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET JURIDICAL USERS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token_client_test}}"
+					}
+				],
+				"url": {
+					"raw": "{{base_path}}/api/v2/public/users/juridical",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"public",
+						"users",
+						"juridical"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET JURIDICAL USER",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token_client_test}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \n     \"userName\" :  \"mgcuesta\",\n     \"firstName\":  \"Miguel\",\n     \"lastName\":   \"G\",\n     \"email\":      \"miguel4@io.builders\",\n     \"mobilePhone\":      \"623302304\",\n     \"identificationType\": \"DNI\",\n     \"identificationNumber\":\"46887400Z\",\n     \"dltAddress\": \"4ASDFASDF\"\n}"
+				},
+				"url": {
+					"raw": "{{base_path}}/api/v2/public/users/juridical/0782ee68-fa59-4da7-ba0a-1596ac5fa339",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"public",
+						"users",
+						"juridical",
+						"0782ee68-fa59-4da7-ba0a-1596ac5fa339"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE PHONE JURIDICAL USER",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer {{token_client_test}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"mobilePhone\": \"+34608888888\"\r\n}"
+				},
+				"url": {
+					"raw": "{{base_path}}/api/v2/public/users/juridical/b628f14e-38c0-4530-8cfa-2e97071e340f/mobile-phone",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"public",
+						"users",
+						"juridical",
+						"b628f14e-38c0-4530-8cfa-2e97071e340f",
+						"mobile-phone"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL USERS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token_client_test}}"
+					}
+				],
+				"url": {
+					"raw": "{{base_path}}/api/v2/public/users",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"public",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OTP REQUEST",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token_client_test}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_path}}/api/v1/public/users/9bb7cd27-fdce-4d65-a3b3-18ee55f7f9df/request-otp",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"public",
+						"users",
+						"9bb7cd27-fdce-4d65-a3b3-18ee55f7f9df",
+						"request-otp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OTP VALIDATE",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer {{token_client_test}}"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"otp\": \"99999\"\r\n}"
+				},
+				"url": {
+					"raw": "{{base_path}}/api/v1/public/users/884e032d-ba82-4070-bcd3-f92a51908a6d/validate-otp",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"public",
+						"users",
+						"884e032d-ba82-4070-bcd3-f92a51908a6d",
+						"validate-otp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UNSUBSCRIBE USER",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token_client_test}}"
+					}
+				],
+				"url": {
+					"raw": "{{base_path}}/api/v2/public/users/a62531dd-b080-4831-9d2a-cc64a5bcf50a",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"public",
+						"users",
+						"a62531dd-b080-4831-9d2a-cc64a5bcf50a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE EXTRA WALLET",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token_client_test}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \n    \"userId\":\"f1397196-fc27-49d1-a7e2-9e1f874d3123\",\n    \"dltAddress\":\"0x0597783AFC184BeacD1Ed0f1b07d449822E3fc29\",\n    \"dltNetwork\": \"AlastriaTelsius\"\n}"
+				},
+				"url": {
+					"raw": "{{base_path}}/api/v1/public/wallets",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"public",
+						"wallets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE IBAN",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token_client_test}}"
+					}
+				],
+				"url": {
+					"raw": "{{base_path}}/api/v1/public/wallets/80520904-f216-41e1-9dec-7e5e45317aea/create-iban",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"public",
+						"wallets",
+						"80520904-f216-41e1-9dec-7e5e45317aea",
+						"create-iban"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET WALLETS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token_client_test}}"
+					}
+				],
+				"url": {
+					"raw": "{{base_path}}/api/v1/public/wallets",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"public",
+						"wallets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET WALLET by UUID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token_client_test}}"
+					}
+				],
+				"url": {
+					"raw": "{{base_path}}/api/v1/public/wallets/a23491e3-d4a2-4f5a-98fb-a22e3a40cf46",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"public",
+						"wallets",
+						"a23491e3-d4a2-4f5a-98fb-a22e3a40cf46"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET WALLET by user",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token_client_test}}"
+					}
+				],
+				"url": {
+					"raw": "{{base_path}}/api/v1/public/wallets?userId=884e032d-ba82-4070-bcd3-f92a51908a6d\n",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"public",
+						"wallets"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "884e032d-ba82-4070-bcd3-f92a51908a6d\n"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UNSUBSCRIBE WALLET",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token_client_test}}"
+					}
+				],
+				"url": {
+					"raw": "{{base_path}}/api/v1/public/wallets/0407c84a-dc12-4aac-8ec4-3a1d77b64600",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"public",
+						"wallets",
+						"0407c84a-dc12-4aac-8ec4-3a1d77b64600"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD FAVORITE EXT ACCOUNT",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token_client_test}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \n\t\"alias\": \"test5\",\n\t\"externalIban\": {\n\t\t\"accountNumber\": \"ES0501288898756878779249\"\n\t}\n}"
+				},
+				"url": {
+					"raw": "{{base_path}}/api/v1/public/wallets/2e942b40-de33-40b8-a373-754c12c82cc7/favourite-external-accounts",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"public",
+						"wallets",
+						"2e942b40-de33-40b8-a373-754c12c82cc7",
+						"favourite-external-accounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET FAVORITE EXT ACCOUNTS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token_client_test}}"
+					}
+				],
+				"url": {
+					"raw": "{{base_path}}/api/v1/public/wallets/5d8c5e02-b3a6-4ba6-9989-36ab69cfdb97/favourite-external-accounts",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"public",
+						"wallets",
+						"5d8c5e02-b3a6-4ba6-9989-36ab69cfdb97",
+						"favourite-external-accounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET FAVORITE EXT ACCOUNT by UUID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token_client_test}}"
+					}
+				],
+				"url": {
+					"raw": "{{base_path}}/api/v1/public/wallets/5d8c5e02-b3a6-4ba6-9989-36ab69cfdb97/favourite-external-accounts",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"public",
+						"wallets",
+						"5d8c5e02-b3a6-4ba6-9989-36ab69cfdb97",
+						"favourite-external-accounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE FAVORITE EXT ACCOUNT",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token_client_test}}"
+					}
+				],
+				"url": {
+					"raw": "{{base_path}}/api/v1/public/wallets/5d8c5e02-b3a6-4ba6-9989-36ab69cfdb97/favourite-external-accounts/f7ea151f-7777-4d2b-abd4-5e9cebb18c9e",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"public",
+						"wallets",
+						"5d8c5e02-b3a6-4ba6-9989-36ab69cfdb97",
+						"favourite-external-accounts",
+						"f7ea151f-7777-4d2b-abd4-5e9cebb18c9e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TEMPORAL PK CREDIT CARD",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token_client_test}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{base_path}}/api/v1/public/wallets/temporalpk",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"public",
+						"wallets",
+						"temporalpk"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CARD CASHIN",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token_client_test}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\": 10000,\r\n    \"card\": {\r\n        \"owner\": \"WsdXNHUQjsb0B7GgLX1srw==\",\r\n        \"brand\": \"VISA\",\r\n        \"number\": \"aH2ZfVy1dYqw+zMsu9Rz5R94j+bYbDF1SWl/vwwH+kM=\",\r\n        \"expiration\": \"ggXybR9uut6TI+ZyNv2iTA==\",\r\n        \"cvv\": \"qclvbQs69hhaCmImXBlFOw==\"\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "{{base_path}}/api/v1/public/wallets/f9cde033-6875-4b34-9680-5e3c6d3a746a/cards/cashIns",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"public",
+						"wallets",
+						"f9cde033-6875-4b34-9680-5e3c6d3a746a",
+						"cards",
+						"cashIns"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CASHOUT",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token_client_test}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \n     \"amount\" :  \"0.01\",\n     \"iban\": {\n     \t\"accountNumber\": \"ES7921000813610123456789\"\n     }\n}"
+				},
+				"url": {
+					"raw": "{{base_path}}/api/v1/public/wallets/a9222e30-cfa9-4eb0-8645-88965dfa1e1c/cashOuts",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"public",
+						"wallets",
+						"a9222e30-cfa9-4eb0-8645-88965dfa1e1c",
+						"cashOuts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CASHOUT TO FAVOURITE EXT ACCOUNT",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token_client_test}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \n     \"amount\" :  \"0.1\",\n     \"favouriteExternalAccountId\": \"d265000a-28e4-4f3a-b0fc-0f3f8f707bb0\",\n     \"concept\": \"testing cashout to favorite\"\n}"
+				},
+				"url": {
+					"raw": "{{base_path}}/api/v1/public/wallets/1c3101aa-9d00-47f4-96d4-db34191b081e/cashout-to-favourite-external-account",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"public",
+						"wallets",
+						"1c3101aa-9d00-47f4-96d4-db34191b081e",
+						"cashout-to-favourite-external-account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TRANSFER",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token_client_test}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \n     \"amount\" :  \"0.5\",\n     \"targetWalletId\": \"877bd6b7-ed92-49e2-8e59-cc814fdb1000\"\n     \n}"
+				},
+				"url": {
+					"raw": "{{base_path}}/api/v1/public/wallets/c50da029-5113-4af9-a7dd-b30c35753887/transfer",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"public",
+						"wallets",
+						"c50da029-5113-4af9-a7dd-b30c35753887",
+						"transfer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE HOLD",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token_client_test}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \n     \"amount\" :  \"1\",\n     \"targetWallet\": \"b487b86b-78a9-42a9-857a-ba86472d1dd2\",\n     \"concept\": \"testing centralized hold\"\n  \n}"
+				},
+				"url": {
+					"raw": "{{base_path}}/api/v1/public/wallets/b8453ba2-7676-4720-9395-2e6c49f15a7b/holds",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"public",
+						"wallets",
+						"b8453ba2-7676-4720-9395-2e6c49f15a7b",
+						"holds"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RELEASE HOLD",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token_client_test}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \n     \"concept\": \"testing centralized hold\"\n}"
+				},
+				"url": {
+					"raw": "{{base_path}}/api/v1/public/wallets/bca950ed-a295-4e6e-828a-6d0d56e52874/holds/eaef9d42-9464-4c1e-acbc-2381d4bb16d9/releaseHold",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"public",
+						"wallets",
+						"bca950ed-a295-4e6e-828a-6d0d56e52874",
+						"holds",
+						"eaef9d42-9464-4c1e-acbc-2381d4bb16d9",
+						"releaseHold"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EXECUTE HOLD",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token_client_test}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \n    \"amount\": \"0.3\",\n    \"concept\": \"testing centralized hold\"\n}"
+				},
+				"url": {
+					"raw": "{{base_path}}/api/v1/public/wallets/1c3101aa-9d00-47f4-96d4-db34191b081e/holds/125e70b1-9b80-49b3-a9da-368f9e9f3e2f/executeHold",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"public",
+						"wallets",
+						"1c3101aa-9d00-47f4-96d4-db34191b081e",
+						"holds",
+						"125e70b1-9b80-49b3-a9da-368f9e9f3e2f",
+						"executeHold"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EXECUTE HOLD AND KEEP OPEN",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token_client_test}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \n    \"amount\": \"0.01\",\n    \"concept\": \"testing centralized hold\"\n}"
+				},
+				"url": {
+					"raw": "{{base_path}}/api/v1/public/wallets/c50da029-5113-4af9-a7dd-b30c35753887/holds/8e00bdd0-ad76-4394-8b9d-f1ca8169884f/executeHoldAndKeepOpen",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"public",
+						"wallets",
+						"c50da029-5113-4af9-a7dd-b30c35753887",
+						"holds",
+						"8e00bdd0-ad76-4394-8b9d-f1ca8169884f",
+						"executeHoldAndKeepOpen"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RENEW HOLD EXPIRATION DATE",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token_client_test}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \n    \"expiration\": \"2020-08-05T15:10:23+02\"\n}"
+				},
+				"url": {
+					"raw": "{{base_path}}/api/v1/public/wallets/1c3101aa-9d00-47f4-96d4-db34191b081e/holds/908f5748-8fcc-4b50-8fc7-d28334ef76fd/renewHold",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"public",
+						"wallets",
+						"1c3101aa-9d00-47f4-96d4-db34191b081e",
+						"holds",
+						"908f5748-8fcc-4b50-8fc7-d28334ef76fd",
+						"renewHold"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET MOVEMENT",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token_client_test}}"
+					}
+				],
+				"url": {
+					"raw": "{{base_path}}/api/v1/public/wallets/f0e3053d-cfb1-4f1a-bb6b-f49d86f1dca1/movements/5714f1e4-8004-46ae-b51d-20c3743979c6",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"public",
+						"wallets",
+						"f0e3053d-cfb1-4f1a-bb6b-f49d86f1dca1",
+						"movements",
+						"5714f1e4-8004-46ae-b51d-20c3743979c6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET MOVEMENTS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token_client_test}}"
+					}
+				],
+				"url": {
+					"raw": "{{base_path}}/api/v1/public/wallets/c50da029-5113-4af9-a7dd-b30c35753887/movements?startDate=2020-02-28 12:00:00&endDate=2020-04-05 7:00:00&status=SUCCESS",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"public",
+						"wallets",
+						"c50da029-5113-4af9-a7dd-b30c35753887",
+						"movements"
+					],
+					"query": [
+						{
+							"key": "startDate",
+							"value": "2020-02-28 12:00:00"
+						},
+						{
+							"key": "endDate",
+							"value": "2020-04-05 7:00:00"
+						},
+						{
+							"key": "status",
+							"value": "SUCCESS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET HOLD",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token_client_test}}"
+					}
+				],
+				"url": {
+					"raw": "{{base_path}}/api/v1/public/wallets/b2d31c18-fde9-48ef-ae7d-88890592b7ef/holds/b2462ed0-d3d7-4c8a-abc3-980fd4472876",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"public",
+						"wallets",
+						"b2d31c18-fde9-48ef-ae7d-88890592b7ef",
+						"holds",
+						"b2462ed0-d3d7-4c8a-abc3-980fd4472876"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET HOLDS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token_e2e_client}}"
+					}
+				],
+				"url": {
+					"raw": "{{base_path}}/api/v1/public/wallets/5d6e3c7d-c19a-4862-8d0a-00d2a8f2505e/holds",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"public",
+						"wallets",
+						"5d6e3c7d-c19a-4862-8d0a-00d2a8f2505e",
+						"holds"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD-IDENTITY",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer {{token_client_test}}"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \n     \"identityType\" :  \"DNI\",\n     \"identityNumber\":  \"90997092F\",\n     \"nationality\":   \"ES\",\n     \"issueDate\":      \"2017-01-14\",\n     \"expiryDate\": \"2022-01-14\",\n     \"birthDate\":      \"1994-05-18\"\n}"
+				},
+				"url": {
+					"raw": "{{base_path}}/api/v2/public/users/natural/9bb7cd27-fdce-4d65-a3b3-18ee55f7f9df/identity",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"public",
+						"users",
+						"natural",
+						"9bb7cd27-fdce-4d65-a3b3-18ee55f7f9df",
+						"identity"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SIMULATE-IDENTITY-VERIFICATION",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer {{token_client_test}}"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \n\n     \"issueDate\": \"2017-01-14\",\n     \"expiryDate\": \"2022-01-14\"\n\n}"
+				},
+				"url": {
+					"raw": "{{base_path}}/api/v2/public/users/natural/884e032d-ba82-4070-bcd3-f92a51908a6d/simulate-identity-verification",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"public",
+						"users",
+						"natural",
+						"884e032d-ba82-4070-bcd3-f92a51908a6d",
+						"simulate-identity-verification"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CHANGE-IDENTITY",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer {{token_client_test}}"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \n     \"identityType\" :  \"DNI\",\n     \"identityNumber\":  \"05464649X\",\n     \"nationality\":   \"ES\",\n     \"issueDate\":      \"2017-01-14\",\n     \"expiryDate\": \"2022-01-14\",\n     \"birthDate\":      \"1994-05-18\"\n}"
+				},
+				"url": {
+					"raw": "{{base_path}}/api/v2/public/users/natural/45223f10-206f-4652-82f9-ad66e938d5ce/identity",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"public",
+						"users",
+						"natural",
+						"45223f10-206f-4652-82f9-ad66e938d5ce",
+						"identity"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET-IDENTITY",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer {{token_client_test}}"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{base_path}}/api/v1/public/users/natural/e4c07270-42a7-4364-9cf9-a2556e707c75/identity",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"public",
+						"users",
+						"natural",
+						"e4c07270-42a7-4364-9cf9-a2556e707c75",
+						"identity"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET IDENTITY FILE",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer {{token_client_test}}"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_path}}/api/v2/public/users/natural/d66d89bb-e6db-4f8d-9227-a962d7a3df1d/identity-file?side=back",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"public",
+						"users",
+						"natural",
+						"d66d89bb-e6db-4f8d-9227-a962d7a3df1d",
+						"identity-file"
+					],
+					"query": [
+						{
+							"key": "side",
+							"value": "back"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "IDENTITY-VERIFICATION",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer {{token_client_test}}"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \n    \"failureUrl\": \"https://ourion.io\",\n\t\"successUrl\": \"https://api.io.cash/portal/\"\n}"
+				},
+				"url": {
+					"raw": "{{base_path}}/api/v2/public/users/natural/45223f10-206f-4652-82f9-ad66e938d5ce/verify-identity",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"public",
+						"users",
+						"natural",
+						"45223f10-206f-4652-82f9-ad66e938d5ce",
+						"verify-identity"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EXTERNAL IBAN-NUMBER",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer {{token_client_test}}"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \n     \"externalIban\" :  \"ES2420381537003000076126\"\n}"
+				},
+				"url": {
+					"raw": "{{base_path}}/api/v2/public/users/natural/e9e0bb00-ba65-4444-b975-ee0a12b8fff7/external-iban",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"public",
+						"users",
+						"natural",
+						"e9e0bb00-ba65-4444-b975-ee0a12b8fff7",
+						"external-iban"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CHANGE-EXTERNAL-IBAN-NUMBER",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer {{token_client_test}}"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \n     \"externalIban\" :  \"ES2420381537003000076126\"\n}"
+				},
+				"url": {
+					"raw": "{{base_path}}/api/v2/public/users/natural/e9e0bb00-ba65-4444-b975-ee0a12b8fff7/external-iban",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"public",
+						"users",
+						"natural",
+						"e9e0bb00-ba65-4444-b975-ee0a12b8fff7",
+						"external-iban"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET-EXTERNAL-IBAN-NUMBER",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer {{token_client_test}}"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \n     \"externalIban\" :  \"ES9121000418450200051332\"\n}"
+				},
+				"url": {
+					"raw": "{{base_path}}/api/v2/public/users/natural/a62531dd-b080-4831-9d2a-cc64a5bcf50a/external-iban",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"public",
+						"users",
+						"natural",
+						"a62531dd-b080-4831-9d2a-cc64a5bcf50a",
+						"external-iban"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EXTERNAL IBAN-FILE",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer {{token_client_test}}"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"description": "ejemplo recibo bancario",
+							"type": "file",
+							"src": "/C:/Users/quique/Downloads/modelo-de-recibo-es-franja-azul-750px.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_path}}/api/v2/public/users/natural/a62531dd-b080-4831-9d2a-cc64a5bcf50a/external-iban-file",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"public",
+						"users",
+						"natural",
+						"a62531dd-b080-4831-9d2a-cc64a5bcf50a",
+						"external-iban-file"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CHANGE EXTERNAL IBAN-FILE",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer {{token_client_test}}"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"description": "ejemplo recibo bancario",
+							"type": "file",
+							"src": "/C:/Users/quique/Downloads/descarga.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_path}}/api/v2/public/users/natural/e9e0bb00-ba65-4444-b975-ee0a12b8fff7/external-iban-file",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"public",
+						"users",
+						"natural",
+						"e9e0bb00-ba65-4444-b975-ee0a12b8fff7",
+						"external-iban-file"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET EXTERNAL-IBAN FILE",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer {{token_client_test}}"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \n     \"iban\" :  \"ES9121000418450200051332\"\n}"
+				},
+				"url": {
+					"raw": "{{base_path}}/api/v2/public/users/natural/e9e0bb00-ba65-4444-b975-ee0a12b8fff7/external-iban-file",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"public",
+						"users",
+						"natural",
+						"e9e0bb00-ba65-4444-b975-ee0a12b8fff7",
+						"external-iban-file"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "INCOME-LEVEL",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer {{token_client_test}}"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \n     \"incomeLevel\" :  \"A\"\n}"
+				},
+				"url": {
+					"raw": "{{base_path}}/api/v2/public/users/natural/45223f10-206f-4652-82f9-ad66e938d5ce/financial-information",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"public",
+						"users",
+						"natural",
+						"45223f10-206f-4652-82f9-ad66e938d5ce",
+						"financial-information"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CHANGE-INCOME LEVEL",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer {{token_client_test}}"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \n     \"incomeLevel\" :  \"A\"\n}"
+				},
+				"url": {
+					"raw": "{{base_path}}/api/v2/public/users/natural/45223f10-206f-4652-82f9-ad66e938d5ce/financial-information",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"public",
+						"users",
+						"natural",
+						"45223f10-206f-4652-82f9-ad66e938d5ce",
+						"financial-information"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HOME ADDRESS",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer {{token_client_test}}"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \n  \"address\": \"mendez Alvaro 38 4A\",\n  \"city\": \"Madrid\",\n  \"countryCode\": \"ES\",\n  \"postalCode\": \"28045\",\n  \"province\": \"Madrid\"\n}"
+				},
+				"url": {
+					"raw": "{{base_path}}/api/v2/public/users/natural/45223f10-206f-4652-82f9-ad66e938d5ce/home-address",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"public",
+						"users",
+						"natural",
+						"45223f10-206f-4652-82f9-ad66e938d5ce",
+						"home-address"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CHANGE-HOME ADDRESS",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer {{token_client_test}}"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \n  \"address\": \"Calle Correlaguna 68\",\n  \"city\": \"Madrid\",\n  \"countryCode\": \"ES\",\n  \"postalCode\": \"28049\",\n  \"province\": \"Madrid\"\n}"
+				},
+				"url": {
+					"raw": "{{base_path}}/api/v2/public/users/natural/45223f10-206f-4652-82f9-ad66e938d5ce/home-address",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"public",
+						"users",
+						"natural",
+						"45223f10-206f-4652-82f9-ad66e938d5ce",
+						"home-address"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OCCUPATION",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer {{token_client_test}}"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \n  \"occupationCode\": \"0011\"\n}"
+				},
+				"url": {
+					"raw": "{{base_path}}/api/v2/public/users/natural/45223f10-206f-4652-82f9-ad66e938d5ce/occupation",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"public",
+						"users",
+						"natural",
+						"45223f10-206f-4652-82f9-ad66e938d5ce",
+						"occupation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CHANGE-OCCUPATION",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer {{token_client_test}}"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \n  \"occupationCode\": \"1325\"\n}"
+				},
+				"url": {
+					"raw": "{{base_path}}/api/v2/public/users/natural/45223f10-206f-4652-82f9-ad66e938d5ce/occupation",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"public",
+						"users",
+						"natural",
+						"45223f10-206f-4652-82f9-ad66e938d5ce",
+						"occupation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "INCOME-TAX FILE",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer {{token_client_test}}"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"description": "ejemplo recibo bancario",
+							"type": "file",
+							"src": "/C:/Users/quique/Downloads/irpf documento.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_path}}/api/v2/public/users/natural/a62531dd-b080-4831-9d2a-cc64a5bcf50a/income-tax-file",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"public",
+						"users",
+						"natural",
+						"a62531dd-b080-4831-9d2a-cc64a5bcf50a",
+						"income-tax-file"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CHANGE INCOME-TAX-FILE",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer {{token_client_test}}"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"description": "ejemplo recibo bancario",
+							"type": "file",
+							"src": "/C:/Users/quique/Downloads/descarga.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_path}}/api/v2/public/users/natural/bc3ed696-b0dd-4be2-bd07-096d6c629fb8/iban-file",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"public",
+						"users",
+						"natural",
+						"bc3ed696-b0dd-4be2-bd07-096d6c629fb8",
+						"iban-file"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET INCOME-TAX",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer {{token_client_test}}"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"description": "ejemplo recibo bancario",
+							"type": "file",
+							"src": "/C:/Users/quique/Downloads/irpf documento.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_path}}/api/v2/public/users/natural/f38b4fd0-9989-4487-a012-5d8931f4a509/income-tax",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"public",
+						"users",
+						"natural",
+						"f38b4fd0-9989-4487-a012-5d8931f4a509",
+						"income-tax"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET INCOME-TAX FILE",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer {{token_client_test}}"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"description": "ejemplo recibo bancario",
+							"type": "file",
+							"src": "/C:/Users/quique/Downloads/irpf documento.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_path}}/api/v2/public/users/natural/f38b4fd0-9989-4487-a012-5d8931f4a509/income-tax-file",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"public",
+						"users",
+						"natural",
+						"f38b4fd0-9989-4487-a012-5d8931f4a509",
+						"income-tax-file"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET KYC DOCUMENT",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer {{token_client_test}}"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{base_path}}/api/v2/public/users/natural/f38b4fd0-9989-4487-a012-5d8931f4a509/kyc-file",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"public",
+						"users",
+						"natural",
+						"f38b4fd0-9989-4487-a012-5d8931f4a509",
+						"kyc-file"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "REQUEST KYC SIGNATURE",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer {{token_client_test}}"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{base_path}}/api/v2/public/users/natural/f38b4fd0-9989-4487-a012-5d8931f4a509/request-kyc-terms-signature",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"public",
+						"users",
+						"natural",
+						"f38b4fd0-9989-4487-a012-5d8931f4a509",
+						"request-kyc-terms-signature"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SIGN KYC SIGNATURE",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer {{token_client_test}}"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{base_path}}/api/v2/public/users/natural/f38b4fd0-9989-4487-a012-5d8931f4a509/request-kyc-terms-signature",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v2",
+						"public",
+						"users",
+						"natural",
+						"f38b4fd0-9989-4487-a012-5d8931f4a509",
+						"request-kyc-terms-signature"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"id": "52a3bf27-cd6c-461b-b64e-1cbabe83d5a5",
+			"key": "URL",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
