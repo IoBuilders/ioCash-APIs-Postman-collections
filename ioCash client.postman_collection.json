@@ -1013,10 +1013,10 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{    \n     \"amount\" :  \"0.01\",\n     \"iban\": {\n     \t\"accountNumber\": \"ES7921000813610123456789\"\n     }\n}"
+					"raw": "{    \n     \"amount\" :  \"0.1\",\n     \"iban\": {\n     \t\"accountNumber\": \"ES1704876783116965865252\"\n     }\n}"
 				},
 				"url": {
-					"raw": "{{base_path}}/api/v1/public/wallets/a9222e30-cfa9-4eb0-8645-88965dfa1e1c/cashOuts",
+					"raw": "{{base_path}}/api/v1/public/wallets/a611e619-16ec-4e81-b24b-bbc52cbb61ba/cashOuts",
 					"host": [
 						"{{base_path}}"
 					],
@@ -1025,7 +1025,7 @@
 						"v1",
 						"public",
 						"wallets",
-						"a9222e30-cfa9-4eb0-8645-88965dfa1e1c",
+						"a611e619-16ec-4e81-b24b-bbc52cbb61ba",
 						"cashOuts"
 					]
 				}
@@ -1091,10 +1091,10 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{    \n     \"amount\" :  \"0.5\",\n     \"targetWalletId\": \"877bd6b7-ed92-49e2-8e59-cc814fdb1000\"\n     \n}"
+					"raw": "{    \n     \"amount\" :  \"0.1\",\n     \"targetWalletId\": \"c50da029-5113-4af9-a7dd-b30c35753887\"\n     \n}"
 				},
 				"url": {
-					"raw": "{{base_path}}/api/v1/public/wallets/c50da029-5113-4af9-a7dd-b30c35753887/transfer",
+					"raw": "{{base_path}}/api/v1/public/wallets/a611e619-16ec-4e81-b24b-bbc52cbb61ba/transfer",
 					"host": [
 						"{{base_path}}"
 					],
@@ -1103,7 +1103,7 @@
 						"v1",
 						"public",
 						"wallets",
-						"c50da029-5113-4af9-a7dd-b30c35753887",
+						"a611e619-16ec-4e81-b24b-bbc52cbb61ba",
 						"transfer"
 					]
 				}
@@ -1308,6 +1308,153 @@
 						"holds",
 						"908f5748-8fcc-4b50-8fc7-d28334ef76fd",
 						"renewHold"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE SCHEDULED OPERATION",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token_client_test}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"alias\": \"operation q05\",\r\n\t\"concept\": \"test concept\",\r\n    \"amount\": 0.1,\r\n    \"receiver\": {\r\n    \t\"type\": \"EXTERNAL_BANK_ACCOUNT\",\r\n    \t\"account\": \"ES2420381537003000076126\"\r\n    },\r\n    \"schedule\": {\r\n    \t\"startDate\": \"2020-05-06T17:14:00.000+02\",\r\n    \t\"frequency\": \"DAILY\",\r\n    \"duration\": {\r\n      \"type\": \"NUMBER_OF_EXECUTIONS\",\r\n      \"value\": \"2\"\r\n     }\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "{{base_path}}/api/v1/public/wallets/a611e619-16ec-4e81-b24b-bbc52cbb61ba/scheduled-operations",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"public",
+						"wallets",
+						"a611e619-16ec-4e81-b24b-bbc52cbb61ba",
+						"scheduled-operations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET SCHEDULED OPERATION",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token_client_test}}"
+					}
+				],
+				"url": {
+					"raw": "{{base_path}}/api/v1/public/wallets/b2d31c18-fde9-48ef-ae7d-88890592b7ef/scheduled-operations/6093ae66-6e11-49ae-a88f-80e358511f53",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"public",
+						"wallets",
+						"b2d31c18-fde9-48ef-ae7d-88890592b7ef",
+						"scheduled-operations",
+						"6093ae66-6e11-49ae-a88f-80e358511f53"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET SCHEDULED OPERATIONS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token_client_test}}"
+					}
+				],
+				"url": {
+					"raw": "{{base_path}}/api/v1/public/wallets/b2d31c18-fde9-48ef-ae7d-88890592b7ef/scheduled-operations",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"public",
+						"wallets",
+						"b2d31c18-fde9-48ef-ae7d-88890592b7ef",
+						"scheduled-operations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET SCHEDULED OPERATION EXECUTIONS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token_client_test}}"
+					}
+				],
+				"url": {
+					"raw": "{{base_path}}/api/v1/public/wallets/a611e619-16ec-4e81-b24b-bbc52cbb61ba/scheduled-operations/c67eeff1-ec92-41c7-849a-bd01b01c33ec/executions",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"public",
+						"wallets",
+						"a611e619-16ec-4e81-b24b-bbc52cbb61ba",
+						"scheduled-operations",
+						"c67eeff1-ec92-41c7-849a-bd01b01c33ec",
+						"executions"
 					]
 				}
 			},
@@ -2491,6 +2638,41 @@
 						"natural",
 						"f38b4fd0-9989-4487-a012-5d8931f4a509",
 						"request-kyc-terms-signature"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET SCHEDULED OPERATIONS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token_client_test}}"
+					}
+				],
+				"url": {
+					"raw": "{{base_path}}/api/v1/public/wallets/a611e619-16ec-4e81-b24b-bbc52cbb61ba/scheduled-operations",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"public",
+						"wallets",
+						"a611e619-16ec-4e81-b24b-bbc52cbb61ba",
+						"scheduled-operations"
 					]
 				}
 			},
