@@ -1333,10 +1333,10 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\t\"alias\": \"operation q05\",\r\n\t\"concept\": \"test concept\",\r\n    \"amount\": 0.1,\r\n    \"receiver\": {\r\n    \t\"type\": \"EXTERNAL_BANK_ACCOUNT\",\r\n    \t\"account\": \"ES2420381537003000076126\"\r\n    },\r\n    \"schedule\": {\r\n    \t\"startDate\": \"2020-05-06T17:14:00.000+02\",\r\n    \t\"frequency\": \"DAILY\",\r\n    \"duration\": {\r\n      \"type\": \"NUMBER_OF_EXECUTIONS\",\r\n      \"value\": \"2\"\r\n     }\r\n    }\r\n}"
+					"raw": "{\r\n\t\"alias\": \"operation q08\",\r\n\t\"concept\": \"test concept\",\r\n    \"amount\": 0.05,\r\n    \"receiver\": {\r\n    \t\"type\": \"EXTERNAL_BANK_ACCOUNT\",\r\n    \t\"account\": \"ES2420381537003000076126\"\r\n    },\r\n    \"schedule\": {\r\n    \t\"startDate\": \"2020-05-15T10:25:00.000+02\",\r\n    \t\"frequency\": \"ONCE\"\r\n    }\r\n}"
 				},
 				"url": {
-					"raw": "{{base_path}}/api/v1/public/wallets/a611e619-16ec-4e81-b24b-bbc52cbb61ba/scheduled-operations",
+					"raw": "{{base_path}}/api/v1/public/wallets/111f18d5-6c89-4c13-816a-4883c13e9f2f/scheduled-operations",
 					"host": [
 						"{{base_path}}"
 					],
@@ -1345,8 +1345,44 @@
 						"v1",
 						"public",
 						"wallets",
-						"a611e619-16ec-4e81-b24b-bbc52cbb61ba",
+						"111f18d5-6c89-4c13-816a-4883c13e9f2f",
 						"scheduled-operations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE SCHEDULED OPERATION",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token_client_test}}"
+					}
+				],
+				"url": {
+					"raw": "{{base_path}}/api/v1/public/wallets/111f18d5-6c89-4c13-816a-4883c13e9f2f/scheduled-operations/4e9f0512-9008-4f4e-a1f3-960b96a8cf68",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"public",
+						"wallets",
+						"111f18d5-6c89-4c13-816a-4883c13e9f2f",
+						"scheduled-operations",
+						"4e9f0512-9008-4f4e-a1f3-960b96a8cf68"
 					]
 				}
 			},
